@@ -4,7 +4,7 @@ const Video = () => {
   const [playing, setPlaying] = useState(false)
 
   useEffect(() => {
-    const video = document.getElementById("video");
+    const video = document.getElementById("video")
   }, [])
 
   const play = () => {
