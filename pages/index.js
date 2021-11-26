@@ -21,7 +21,7 @@ export default function Index() {
         </p>
         <p>
           If you came here for Web or Blockchain Development, you&apos;ll find all information on{' '}
-          <Link href="https://www.christof.digital"><a className='link' rel="noopener noreferrer nofollow">christof.digital</a></Link>.
+          <a href="https://www.christof.digital" className='link' rel="noopener noreferrer nofollow">christof.digital</a>.
         </p>
       </div>
     </div>
