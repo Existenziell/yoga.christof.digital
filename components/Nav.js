@@ -7,6 +7,7 @@ const Nav = () => {
     const links = [
         { name: "Root", url: "/" },
         { name: "Timeline", url: "/timeline" },
+        { name: "Services", url: "/services" },
         { name: "Map", url: "/map" },
         { name: "Contact", url: "/contact" },
     ]

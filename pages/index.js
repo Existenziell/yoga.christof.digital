@@ -13,7 +13,7 @@ export default function Index() {
         <h1 className="text-4xl">Welcome &#x2661;</h1>
         <p>
           Hi, I am Christof. You have come to the right place.<br />
-          <h2>Let&apos;s find out what I can do for you!</h2>
+          Let&apos;s find out what I can do for you!
         </p>
         <p>
           I am travelling the world, practicing and teaching Yoga and looking for enticing projects and humans.<br />
