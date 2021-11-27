@@ -24,7 +24,7 @@ const Yoga = () => {
 
 Yoga.getLayout = function getLayout(page) {
   return (
-    <Layout>
+    <Layout title="Timeline">
       {page}
     </Layout>
   )
