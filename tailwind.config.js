@@ -16,14 +16,27 @@ module.exports = {
       backgroundImage: {
         'cloth-pattern': "url('/icons/cloth.jpg')",
         'cloth-pattern-dark': "url('/icons/cloth-dark.jpg')",
-        'chevron-pattern': "url('/icons/chevron.svg')",
+        'parallax-1': "url('/parallax/1.webp')",
+        'parallax-2': "url('/parallax/2.webp')",
       },
       minWidth: {
         '1/4': '25%',
         '1/2': '50%',
         '3/4': '75%',
       },
-    }
+    },
+    gradientColorStops: theme => ({
+      // primary: '#22c1c3',
+      // secondary: '#fdbb2d',
+      // primary: '#00c3ff',
+      // secondary: '#ffff1c',
+      primary: '#16A085',
+      secondary: '#F4D03F',
+      // primary: '#36D1DC',
+      // secondary: '#5B86E5',
+      // primary: '#007991',
+      // secondary: '#78ffd6',
+    }),
   },
   variants: {
     extend: {},

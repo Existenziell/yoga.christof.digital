@@ -23,6 +23,9 @@ const Video = () => {
           </svg>
         }
       </div>
+      <p className='mt-4'>
+        Inspired by <a href='https://tylandrum.com/' target='_blank' rel="noopener noreferrer nofollow" className='link'>Ty Landrum</a>.
+      </p>
     </>
   )
 }

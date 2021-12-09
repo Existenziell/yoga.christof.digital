@@ -7,15 +7,15 @@ import Video from '../components/Video'
 const Yoga = () => {
 
   return (
-    <div className="flex flex-col items-center justify-center text-center">
+    <div className="flex flex-col items-center justify-center px-4 md:px-8 py-16 md:py-32">
       <h1 className='text-4xl mb-8'>Yoga</h1>
       <p className='mb-4 md:px-32 leading-relaxed'>
-        Yoga really had an impact on my life. A groundbreaking impact that changed so much and helped me become a better version of myself (as cliché as this might sound in 2021).
-        The following is a place where you can explore the world of shift_happens_yoga, take a deep dive into what brought me here or just follow along on this indeed life changing endeavour.
-        There is also <Link href="/map"><a>the Map</a></Link> where you can visually interact with all the shifting events of my journey.
-        As one of my best teachers always used to say:
+        Yoga had quite an impact on my life. A groundbreaking impact indeed, that changed so much, so drastically, for the better.
+        The following timeline is trying to put all the different places/learnings/teachings I was opportune to experience during my journey in semantic and chronological context.
+        If you prefer an even more visual context, <Link href="/map"><a className='link'>visit the Map</a></Link>.
       </p>
-      <Quote text="Make your breath louder than your thoughts" classes='mt-4 mb-16' />
+      <p>As one of my best teachers always used to say:</p>
+      <Quote text="Make your breath louder than your thoughts" classes='mt-4 mb-12' />
       <Timeline />
       <Video />
     </div>
