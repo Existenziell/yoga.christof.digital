@@ -5,7 +5,6 @@ import Nav from "../components/Nav"
 import Image from 'next/image'
 
 const Testimonials = () => {
-  console.log(testimonials);
   return (
     <>
       <Head>
