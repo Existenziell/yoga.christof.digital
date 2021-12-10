@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Index() {
   return (
     <>
-      <header className='flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover bg-parallax-1'>
+      <header className='flex items-center justify-center h-screen mb-12 sm:bg-fixed bg-center bg-cover bg-parallax-1'>
         <h1 className='p-5 text-2xl text-white bg-brand bg-opacity-50 rounded'>
           Welcome &#x2661;
         </h1>
@@ -28,7 +28,7 @@ export default function Index() {
         </p>
       </div>
 
-      <section className='flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover bg-parallax-2'>
+      <section className='flex items-center justify-center h-screen mb-12 sm:bg-fixed bg-center bg-cover bg-parallax-2'>
         <div className='p-5 text-2xl text-white bg-brand bg-opacity-50 rounded'>
           shift happens, sooner or later :)
         </div>
