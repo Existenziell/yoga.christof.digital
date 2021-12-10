@@ -22,7 +22,7 @@ const Nav = () => {
 
     return (
 
-        <nav className={`absolute dark:bg-black dark:text-gray-300 w-full py-3 md:py-0 z-10 ${router.pathname === '/map' && 'bg-white'}`}>
+        <nav className={`absolute dark:bg-black dark:text-gray-300 w-full py-3 md:py-0 z-10 ${router.pathname === '/map' && 'relative'}`}>
 
             {/* Desktop menu */}
             <ul className='hidden md:flex justify-between items-center ml-4 w-max '>
