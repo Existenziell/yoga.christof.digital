@@ -1,23 +1,23 @@
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: "media", // or 'media' or 'class'
+  darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
         // https://tailwindcss.com/docs/font-family#customizing
         sans: [
-          'Gotu'
+          'Gotu',
         ],
       },
       colors: {
-        'brand': '#C90076',
+        brand: '#C90076',
       },
       backgroundImage: {
-        'cloth-pattern': "url('/icons/cloth.jpg')",
-        'cloth-pattern-dark': "url('/icons/cloth-dark.jpg')",
-        'parallax-1': "url('/parallax/1.webp')",
-        'parallax-2': "url('/parallax/2.webp')",
+        'cloth-pattern': 'url(/icons/cloth.jpg)',
+        'cloth-pattern-dark': 'url(/icons/cloth-dark.jpg)',
+        'parallax-1': 'url(/parallax/1.webp)',
+        'parallax-2': 'url(/parallax/2.webp)',
       },
       minWidth: {
         '1/4': '25%',

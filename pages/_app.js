@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
   return getLayout(
     <>
       <NextNprogress
-        color="var(--color-brand)"
+        color='var(--color-brand)'
         startPosition={0.3}
         stopDelayMs={100}
         height={3}

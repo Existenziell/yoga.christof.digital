@@ -1,17 +1,15 @@
 import Layout from '../components/Layout'
-import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Index() {
   return (
-
     <>
-      <header className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover bg-parallax-1">
-        <h1 className="p-5 text-2xl text-white bg-brand bg-opacity-50 rounded">
+      <header className='flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover bg-parallax-1'>
+        <h1 className='p-5 text-2xl text-white bg-brand bg-opacity-50 rounded'>
           Welcome &#x2661;
         </h1>
       </header>
-      <div className="max-w-xl m-auto px-4 leading-relaxed">
+      <div className='max-w-xl m-auto px-4 leading-relaxed'>
 
         <h2 className='text-2xl'>
           Hi, I am Christof.
@@ -26,19 +24,19 @@ export default function Index() {
         </p>
         <p className='mb-12'>
           I have been travelling the world, for the last 4 years, practicing and teaching Yoga and looking for enticing projects and humans.<br />
-          Please <Link href="/contact"><a className='link'>contact me</a></Link> if you see possible synergies or have questions.
+          Please <Link href='/contact'><a className='link'>contact me</a></Link> if you see possible synergies or have questions.
         </p>
       </div>
 
-      <section className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover bg-parallax-2">
-        <div className="p-5 text-2xl text-white bg-brand bg-opacity-50 rounded">
+      <section className='flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover bg-parallax-2'>
+        <div className='p-5 text-2xl text-white bg-brand bg-opacity-50 rounded'>
           shift happens, sooner or later :)
         </div>
       </section>
-      <div className="max-w-lg m-auto">
+      <div className='max-w-lg m-auto'>
         <p className='pb-32'>
           If Web or Blockchain Development was the reason you visit me, you&apos;ll find all information on{' '}
-          <a href="https://www.christof.digital" className='link' rel="noopener noreferrer nofollow">christof.digital</a>.
+          <a href='https://www.christof.digital' className='link' rel='noopener noreferrer nofollow'>christof.digital</a>.
         </p>
       </div>
     </>
