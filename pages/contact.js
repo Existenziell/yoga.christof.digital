@@ -42,14 +42,24 @@ const Contact = () => {
                 Languages I understand without Google Translate are:<br />
                 English, Deutsch, Français, Español, Catalán and नेपाली (well, the basics ッ).
             </p>
-            <div className='p-4 sm:p-12 mt-6 shadow w-full lg:w-2/3 bg-gradient-to-b from-primary to-secondary'>
-                <form onSubmit={submitForm} className='flex flex-col space-y-6 '>
-                    <input type='text' name='name' placeholder='Name' onChange={setData} required></input>
-                    <input type='email' name='email' placeholder='Email' onChange={setData} required></input>
-                    <textarea placeholder='I am no robot...' name='message' onChange={setData} rows='10' required></textarea>
+            <div className='px-4 py-8 sm:p-12 mt-6 shadow w-full lg:w-2/3 bg-white dark:bg-gray-700'>
+                <form onSubmit={submitForm}>
+
+                    <div className='relative mb-12'>
+                        <input id='name' name='name' type='text' onChange={setData} required disabled={sending} className='peer' placeholder='Name' />
+                        <label htmlFor='name'>Name</label>
+                    </div>
+                    <div className='relative mb-12'>
+                        <input id='email' type='email' name='email' onChange={setData} required disabled={sending} className='peer' placeholder='Email' />
+                        <label htmlFor='email'>Email</label>
+                    </div>
+                    <div className='relative'>
+                        <textarea id='message' name='message' onChange={setData} rows='10' required disabled={sending} className='peer' placeholder='Message'></textarea>
+                        <label htmlFor='message' className='-top-5 peer-focus:-top-5'>Message</label>
+                    </div>
 
                     {errorMsg ?
-                        <div className='text-left bg-red-700 text-white p-4'>
+                        <div className='text-left bg-brand text-white p-4'>
                             {errorMsg}
                         </div>
                         :
