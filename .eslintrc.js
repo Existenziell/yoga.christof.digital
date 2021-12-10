@@ -31,7 +31,7 @@ module.exports = {
     indent: 'off',
     quotes: ['error', 'single', { allowTemplateLiterals: true }],
     'space-before-function-paren': ['error', {
-      anonymous: 'never',
+      anonymous: 'always',
       named: 'never',
       asyncArrow: 'always',
     }],

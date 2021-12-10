@@ -2,9 +2,10 @@ import { useState } from 'react'
 
 const Video = () => {
   const [playing, setPlaying] = useState(false)
-
   const play = () => {
+    /* eslint-disable no-undef */
     video.play()
+    /* eslint-enable no-undef */
     setPlaying(true)
   }
 
