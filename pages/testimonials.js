@@ -1,7 +1,8 @@
 import { FacebookProvider, EmbeddedPost } from 'react-facebook';
+import { testimonials } from '../lib/testimonials';
 import Head from "next/head"
 import Nav from "../components/Nav"
-import { testimonials } from '../lib/testimonials';
+import Image from 'next/image'
 
 const Testimonials = () => {
   console.log(testimonials);
@@ -21,7 +22,8 @@ const Testimonials = () => {
         <h1 className="text-4xl mb-2">Testimonials</h1>
         <p className="mb-12 max-w-sm text-center">Let&apos;s see how students described their experience with shift_happens_yoga:</p>
 
-        <div className='w-full flex flex-col space-y-8'>
+        <Image src='/icons/rating.jpg' alt='Rating' width={500} height={328} />
+        <div className='w-full flex flex-col space-y-8 mt-16'>
           {testimonials.map(tm => {
             return (
               <div key={tm}>
