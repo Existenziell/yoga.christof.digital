@@ -3,6 +3,7 @@ import { testimonials } from '../lib/testimonials'
 import Head from 'next/head'
 import Nav from '../components/Nav'
 import Image from 'next/image'
+import Blob from '../components/Blob'
 
 const Testimonials = () => {
   return (
@@ -21,7 +22,8 @@ const Testimonials = () => {
         <h1 className='text-4xl mb-2'>Testimonials</h1>
         <p className='mb-12 max-w-sm text-center'>Let&apos;s see how students described their experience with shift_happens_yoga:</p>
 
-        <Image src='/icons/rating.jpg' alt='Rating' width={500} height={328} />
+        <Blob node={<Image src='/icons/rating.jpg' alt='Rating' width={500} height={328} />} />
+
         <div className='w-full flex flex-col space-y-8 mt-16'>
           {testimonials.map(tm => {
             return (
