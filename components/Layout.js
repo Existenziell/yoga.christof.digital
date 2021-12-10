@@ -12,9 +12,9 @@ export default function Layout({ children, title }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
         <title>
-          {title ? `${title} | christof.digital` : `christof.digital`}
+          {title ? `${title} | yoga.christof.digital` : `yoga.christof.digital`}
         </title>
-        <meta name="description" content="Fullstack Developer | Web &amp; Blockchain | christof.digital | shift-happens" />
+        <meta name="description" content="yoga.christof.digital | shift-happens | Yoga &amp; Movement" />
       </Head>
       <div className='dark:bg-black h-full'>
         <Social />

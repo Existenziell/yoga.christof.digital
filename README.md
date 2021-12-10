@@ -1,3 +1,3 @@
-# christof.digital
+# yoga.christof.digital
 
 A private website

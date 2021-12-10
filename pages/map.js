@@ -46,13 +46,13 @@ const MapComponent = () => {
   return (
     <div className="min-w-max h-screen">
       <Head>
-        <title>Map | christof.digital</title>
+        <title>Map | yoga.christof.digital</title>
         <link rel="icon" href="/favicon/favicon.ico" />
         <link
           href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
           rel="stylesheet"
         />
-        <meta name="description" content="Join me on a visual journey through my life | christof.digital | shift-happens" />
+        <meta name="description" content="Join me on a visual journey through my life | yoga.christof.digital | shift-happens" />
       </Head>
       <Nav />
       <div id="map" className="h-full w-full" />

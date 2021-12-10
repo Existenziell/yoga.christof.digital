@@ -18,8 +18,8 @@ const sendMail = async (req, res) => {
   const confirmationMsg = {
     to: email,
     from: process.env.NEXT_PUBLIC_MAIL_FROM,
-    subject: `Contact confirmation | christof.digital`,
-    text: `Hello ${name},\nThis is a confirmation, that your message to christof.digital has indeed been received properly.\nI'll come back to you as soon as possible.\nThank you so much.\nChristof`
+    subject: `Contact confirmation | yoga.christof.digital`,
+    text: `Hello ${name},\nThis is a confirmation, that your message to yoga.christof.digital has indeed been received successfully.\nI'll come back to you as soon as possible.\nThank you so much.\nChristof`
   }
 
   try {

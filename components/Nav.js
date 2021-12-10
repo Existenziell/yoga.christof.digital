@@ -8,6 +8,7 @@ const Nav = () => {
         { name: "Root", url: "/" },
         { name: "Timeline", url: "/timeline" },
         { name: "Services", url: "/services" },
+        { name: "Testimonials", url: "/testimonials" },
         { name: "Map", url: "/map" },
         { name: "Contact", url: "/contact" },
     ]
