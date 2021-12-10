@@ -32,7 +32,7 @@ const Nav = () => {
                         <Link href={l.url}>
                             <a
                                 href={l.url}
-                                className={`${router.pathname === l.url ? 'active-nav' : 'border-b-2 border-white dark:border-brand'} hover:border-brand transition-all px-4 py-2 block`}>
+                                className={`${router.pathname === l.url ? 'active-nav' : 'border-b-2 border-white dark:border-brand'} hover:border-brand hover:bg-white dark:hover:text-black transition-all px-4 pb-2 pt-3 block`}>
 
                                 {l.name}
                             </a>
