@@ -1,29 +1,45 @@
+import { useState } from 'react'
 import Image from 'next/image'
+import Sorting from './Sorting'
 import { timeline } from '../lib/timeline'
 
 const Timeline = () => {
+  const [sortBy, setSortBy] = useState("desc")
+  const [sortingVisible, setSortingVisible] = useState(false)
+  const [data, setData] = useState(timeline.features)
+
+  const toggleSortBy = (e) => {
+    setSortBy(e.target.value)
+    setData(data.slice().reverse())
+  }
 
   return (
     <section className='timeline bg-cloth-pattern bg-repeat dark:bg-cloth-pattern-dark'>
-      <h2 className='text-3xl mb-12'>The Timeline:</h2>
+      <h2 className='text-3xl mb-1'>The Timeline:</h2>
       {/* <p className='mb-16'>Join me, as Yoga became part of me.</p> */}
 
-      <ul className='text-left w-full'>
-        {timeline.features.map((feature, index) => {
+      <Sorting
+        sortBy={sortBy}
+        sortingVisible={sortingVisible}
+        setSortingVisible={setSortingVisible}
+        toggleSortBy={toggleSortBy}
+      />
+
+      <ul className='text-left w-full mt-12'>
+        {data.map((feature, index) => {
           const { id, image, date, name, subname, description, mapOnly } = feature.properties
           if (!mapOnly) {
             return (
-              <li key={index} className={`shadow-xl mb-16 bg-white sm:w-4/5 relative rounded-md ${index % 2 === 0 && `ml-auto`} dark:bg-black dark:text-gray-300`}>
-                <div>
-                  <Image
-                    src={`/timeline/${image}.jpg`}
-                    width={800}
-                    height={450}
-                    layout={'responsive'}
-                    alt={name}
-                  />
-                </div>
-                <div className={`absolute top-0 text-white bg-black p-2 ${index % 2 === 0 ? `right-0` : `left-0`}`}>{date}</div>
+              <li key={image} className={`shadow-xl mb-16 bg-white sm:w-4/5 relative rounded-md ${image % 2 === 0 && `ml-auto`} dark:bg-black dark:text-gray-300`}>
+                <Image
+                  src={`/timeline/${image}.jpg`}
+                  width={800}
+                  height={450}
+                  layout={'responsive'}
+                  alt={name}
+                  priority={index === 1 || index === 19}
+                />
+                <div className={`absolute top-0 text-white bg-black p-2 ${image % 2 === 0 ? `right-0` : `left-0`}`}>{date}</div>
                 <div className='p-4'>
                   <h3 className='text-2xl text-brand'>{name}</h3>
                   <h4 className='text-sm mb-6'>{subname}</h4>
@@ -32,7 +48,6 @@ const Timeline = () => {
               </li>
             )
           }
-
         })}
       </ul>
 
