@@ -75,7 +75,6 @@ html, body {
     transition-all
 }
 
-
 input[type="radio"] {
   @apply focus:outline-none hover:cursor-pointer mr-2 align-text-bottom mb-0.5; 
 }
