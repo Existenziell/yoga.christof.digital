@@ -88,7 +88,7 @@ const Nav = () => {
                             <a
                                 href={l.url}
                                 onClick={intercept}
-                                className={`${router.pathname === l.url && 'active-nav shadow-sm'} w-full block text-4xl text-center leading-loose px-8 py-2 hover:bg-brand hover:text-white transition-all`}>
+                                className={`${router.pathname === l.url && 'active-nav shadow-sm'} w-full block text-2xl md:text-4xl text-center leading-loose px-8 py-2 hover:bg-brand hover:text-white transition-all`}>
 
                                 {l.name}
                             </a>
