@@ -1,45 +1,23 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { socialLinks } from '../lib/socialLinks'
 
 const Social = () => {
   return (
-    <div className='absolute right-8 top-3 z-20 dark:bg-gray-300 rounded-md dark:pt-2 dark:px-4 dark:top-1'>
-      <ul className='flex gap-4'>
-        <li className='border-b-2 border-transparent hover:border-b-2 hover:border-brand'>
-          <Link href='https://api.whatsapp.com/send?phone=00529871145200'>
-            <a target='_blank' rel='noopener noreferrer nofollow'>
-              <Image src='/social/whatsapp.png' width={20} height={20} alt='WhatsApp'></Image>
-            </a>
-          </Link>
-        </li>
-        <li className='hover:border-b-2 border-brand'>
-          <Link href='https://www.instagram.com/shift_happens_yoga'>
-            <a target='_blank' rel='noopener noreferrer nofollow'>
-              <Image src='/social/instagram.png' width={20} height={20} alt='Instagram'></Image>
-            </a>
-          </Link>
-        </li>
-        <li className='hover:border-b-2 border-brand'>
-          <Link href='https://web.facebook.com/shift.happens.yogi'>
-            <a target='_blank' rel='noopener noreferrer nofollow'>
-              <Image src='/social/facebook.png' width={20} height={20} alt='Facebook'></Image>
-            </a>
-          </Link>
-        </li>
-        <li className='hover:border-b-2 border-brand'>
-          <Link href='https://www.linkedin.com/in/christofbauer/'>
-            <a target='_blank' rel='noopener noreferrer nofollow'>
-              <Image src='/social/linkedin.png' width={20} height={20} alt='LinkedIn'></Image>
-            </a>
-          </Link>
-        </li>
-        <li className='hover:border-b-2 border-brand'>
-          <Link href='https://github.com/Existenziell'>
-            <a target='_blank' rel='noopener noreferrer nofollow'>
-              <Image src='/social/github.png' width={20} height={20} alt='Github'></Image>
-            </a>
-          </Link>
-        </li>
+    <div className='right-4 top-20 z-20 dark:bg-gray-300 rounded-md dark:pt-2 dark:px-4 dark:top-1'>
+      <ul className='flex gap-2 dark:gap-4'>
+        {socialLinks.map(l => {
+          const { name, link, image } = l
+          return (
+            <li className='border-b-2 border-transparent hover:border-b-2 hover:border-brand hover:opacity-70' key={name}>
+              <Link href={link}>
+                <a target='_blank' rel='noopener noreferrer nofollow'>
+                  <Image src={image} width={20} height={20} alt={name}></Image>
+                </a>
+              </Link>
+            </li>
+          )
+        })}
       </ul>
     </div>
   )

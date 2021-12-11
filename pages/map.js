@@ -52,6 +52,11 @@ const MapComponent = () => {
           rel='stylesheet'
         />
         <meta name='description' content='Join me on a visual journey through my life | yoga.christof.digital | shift-happens' />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Gotu&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <Nav />
       <div id='map' className='h-full w-full' />

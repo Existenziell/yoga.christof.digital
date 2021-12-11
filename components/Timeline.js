@@ -30,7 +30,7 @@ const Timeline = () => {
           const { id, image, date, name, subname, description, mapOnly } = feature.properties
           if (!mapOnly) {
             return (
-              <li key={image} className={`shadow-xl mb-16 bg-white sm:w-4/5 relative rounded-md ${image % 2 === 0 && `ml-auto`} dark:bg-black dark:text-gray-300`}>
+              <li key={image} className={`shadow-xl mb-16 bg-white sm:w-4/5 relative rounded-md ${image % 2 === 0 && `ml-auto`} dark:bg-black dark:text-gray-300 dark:border-white dark:border-2`}>
                 <Image
                   src={`/timeline/${image}.jpg`}
                   width={800}

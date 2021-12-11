@@ -22,7 +22,7 @@ export default function Layout({ children, title }) {
         />
       </Head>
       <div className='dark:bg-black h-full'>
-        <Social />
+        {/* <Social /> */}
         <Nav />
       </div>
       <main className='w-full text-center bg-cloth-pattern bg-repeat dark:bg-cloth-pattern-dark dark:text-gray-300'>
