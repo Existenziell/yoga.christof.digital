@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Footer from './Footer'
 import Nav from './Nav'
-import Social from './Social'
 
 export default function Layout({ children, title }) {
   return (
