@@ -15,6 +15,11 @@ export default function Layout({ children, title }) {
           {title ? `${title} | yoga.christof.digital` : `yoga.christof.digital`}
         </title>
         <meta name='description' content='yoga.christof.digital | shift-happens | Yoga &amp; Movement' />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Gotu&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <div className='dark:bg-black h-full'>
         <Social />
