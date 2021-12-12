@@ -11,6 +11,7 @@ email: bauer.christof@gmail.com
 
 :root {
   --color-brand: #C90076;
+  --color-brand-dark: #200530;
 }
 
 @tailwind base;

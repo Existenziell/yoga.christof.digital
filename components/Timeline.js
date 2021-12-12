@@ -26,7 +26,6 @@ const Timeline = () => {
           const { id, image, date, name, subname, description, mapOnly } = feature.properties
           if (!mapOnly) {
             return (
-
               <li
                 key={image}
                 className={`mb-16 sm:w-4/5 relative rounded shadow-lg  
