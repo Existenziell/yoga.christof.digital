@@ -6,7 +6,7 @@ export default function Index() {
     <>
       <header className='flex items-center justify-center h-screen sm:bg-fixed bg-center bg-cover bg-parallax-1'>
         <a href='#anchor' aria-label='Scroll down'>
-          <h1 className='p-5 text-2xl text-white bg-brand bg-opacity-50 rounded'>
+          <h1 className='p-5 text-2xl text-white bg-brand bg-opacity-50 dark:bg-brand-dark rounded'>
             Hi, I am Christof.
           </h1>
         </a>
@@ -31,8 +31,8 @@ export default function Index() {
       </div>
 
       <section className='flex items-center justify-center h-screen mb-12 sm:bg-fixed bg-center bg-cover bg-parallax-2'>
-        <div className='p-5 text-2xl text-white bg-brand bg-opacity-50 rounded'>
-          shift happens, sooner or later :)
+        <div className='p-5 text-2xl rounded text-white bg-brand bg-opacity-50 dark:bg-brand-dark'>
+          shift happens, sooner rather than later.
         </div>
       </section>
       <div className='max-w-lg m-auto'>
