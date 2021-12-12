@@ -44,7 +44,7 @@ const Timeline = () => {
                 <div className='p-4'>
                   <h3 className='text-3xl mt-3 text-brand'>{name}</h3>
                   <h4 className='text-sm mb-6'>{subname}</h4>
-                  <p dangerouslySetInnerHTML={{ __html: description }} className=' leading-relaxed'></p>
+                  <p dangerouslySetInnerHTML={{ __html: description }} className='leading-relaxed'></p>
                 </div>
               </li>
             )

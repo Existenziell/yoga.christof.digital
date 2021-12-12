@@ -7,7 +7,7 @@ export default function Index() {
       <header className='flex items-center justify-center h-screen sm:bg-fixed bg-center bg-cover bg-parallax-1'>
         <a href='#anchor' aria-label='Scroll down'>
           <h1 className='p-5 text-2xl text-white bg-brand bg-opacity-50 dark:bg-brand-dark rounded'>
-            Hi, I am Christof.
+            I am Christof.
           </h1>
         </a>
       </header>
