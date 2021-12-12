@@ -9,19 +9,16 @@ export default function Layout({ children, title }) {
   return (
     <>
       <Head>
-        <link rel='icon' href='/favicon/favicon.ico' />
-        <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-touch-icon.png' />
-        <link rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png' />
-        <link rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png' />
         <title>
           {title ? `${title} | yoga.christof.digital` : `yoga.christof.digital`}
         </title>
         <meta name='description' content='yoga.christof.digital | shift-happens | Yoga &amp; Movement' />
+        <link rel='icon' href='/favicon/favicon.ico' />
+        <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-touch-icon.png' />
+        <link rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png' />
+        <link rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png' />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Gotu&display=swap"
-          rel="stylesheet"
-        />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" />
         {router.pathname === '/map' &&
           <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
         }
