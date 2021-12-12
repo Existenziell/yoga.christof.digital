@@ -39,7 +39,7 @@ const Timeline = () => {
                   alt={name}
                   priority={index === 1 || index === 19}
                 />
-                <div className={`absolute top-0 text-white bg-black p-2 ${image % 2 === 0 ? `right-0` : `left-0`}`}>{date}</div>
+                <div className={`absolute top-0 text-white bg-white/10 backdrop-blur-md p-2 ${image % 2 === 0 ? `right-0 rounded-bl-md` : `left-0 rounded-br-md`}`}>{date}</div>
                 <div className='p-4'>
                   <h3 className='text-3xl mt-3 text-brand'>{name}</h3>
                   <h4 className='text-sm mb-6'>{subname}</h4>

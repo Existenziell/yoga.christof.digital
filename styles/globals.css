@@ -37,11 +37,11 @@ html, body {
 }
 
 ::selection {
-  @apply text-brand bg-gray-100;
+  @apply text-brand;
 }
 
 ::-moz-selection {
-  @apply text-brand bg-gray-100;
+  @apply text-brand;
 }
 
 .link {
