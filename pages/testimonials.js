@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Blob from '../components/Blob'
 
 const Testimonials = () => {
-
   const testimonials = [
     'https://web.facebook.com/shahar.a.yadid/posts/10215294421014106',
     'https://web.facebook.com/marc.radtke/posts/2826244507399318',
