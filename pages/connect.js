@@ -45,8 +45,8 @@ const Connect = () => {
                         Languages I understand without Translator are:{' '}
                         English, Deutsch, Français, Español and Catalán.
                     </p>
-                    <p className='text-lg leading-relaxed mb-8'>
-                        This picture was taken in the beautiful city of Mysuru, Karnataka, India, with my teacher Rama. Pose: Dwi Pada Shirshasana - still a long way to go ッ
+                    <p className='text-base leading-relaxed mb-8'>
+                        This picture was taken in the beautiful city of Mysuru, Karnataka, India, with my teacher <a href='https://www.instagram.com/rameshshetty_yoga_shala' target='_blank' rel='noopener noreferrer nofollow' className='link'>Ramesh Shetty</a>. Pose: Dwi Pada Shirshasana - still a long way to go ッ
                     </p>
                 </div>
                 <Image src='/icons/connect.webp' alt='Connect' width={300} height={460} priority={true} />
