@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Index() {
   return (
@@ -12,8 +13,16 @@ export default function Index() {
         </a>
       </header>
 
-      <div className='max-w-xl m-auto px-4 leading-relaxed my-16'>
-        <h2 className='text-2xl mb-6' id='anchor'>
+      <div className='max-w-xl m-auto px-4 leading-relaxed my-16' id='anchor'>
+
+        <div className='block dark:hidden lg:w-1/2'>
+          <Image src='/icons/logo.png' width={300} height={165} alt='Logo' priority={true} />
+        </div>
+        <div className='hidden dark:block lg:w-1/2'>
+          <Image src='/icons/logo-dark.png' width={300} height={165} alt='Logo' priority={true} />
+        </div>
+
+        <h2 className='text-2xl mb-6 mt-4'>
           You have come to the right place.
         </h2>
         <p className='mb-2'>
