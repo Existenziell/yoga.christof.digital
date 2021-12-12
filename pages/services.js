@@ -13,8 +13,8 @@ const Services = () => {
           {services.map((s, index) => {
             const { title, copy } = s
             return (
-              <li key={index} className={`w-full md:w-1/2 mb-16 px-4 lg:px-8`}>
-                <div className='relative rounded-md shadow-xl hover:shadow-none transition-all  bg-white dark:bg-gray-900 dark:text-gray-300 hover:scale-105'>
+              <li key={index} className={`w-full md:w-1/2 mb-16 px-4 lg:px-12`}>
+                <div className='relative rounded-md shadow hover:shadow-xl transition-all bg-white dark:bg-gray-900 dark:text-gray-300 hover:scale-105 duration-500'>
                   <Link href='/connect'>
                     <a>
                       <Image

@@ -4,24 +4,20 @@ import Sorting from './Sorting'
 import { timeline } from '../lib/timeline'
 
 const Timeline = () => {
-  const [sortBy, setSortBy] = useState("desc")
-  const [sortingVisible, setSortingVisible] = useState(false)
+  const [sortBy, setSortBy] = useState(true)
   const [data, setData] = useState(timeline.features)
 
-  const toggleSortBy = (e) => {
-    setSortBy(e.target.value)
+  const toggleSortBy = () => {
     setData(data.slice().reverse())
+    setSortBy(!sortBy)
   }
 
   return (
     <section className='timeline bg-cloth-pattern bg-repeat dark:bg-none dark:bg-brand-dark'>
-      <h2 className='text-3xl mb-1'>The Timeline:</h2>
-      {/* <p className='mb-16'>Join me, as Yoga became part of me.</p> */}
+      <h2 className='text-4xl mb-2'>The Timeline:</h2>
 
       <Sorting
         sortBy={sortBy}
-        sortingVisible={sortingVisible}
-        setSortingVisible={setSortingVisible}
         toggleSortBy={toggleSortBy}
       />
 

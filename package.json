@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.2",
     "@mapbox/mapbox-gl-geocoder": "^4.7.4",
     "@sendgrid/mail": "^7.6.0",
     "mapbox-gl": "^2.6.0",
