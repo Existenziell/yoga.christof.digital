@@ -15,10 +15,10 @@ export default function Index() {
 
       <div className='max-w-xl m-auto px-4 leading-relaxed my-16' id='anchor'>
 
-        <div className='block dark:hidden lg:w-1/2'>
+        <div className='block dark:hidden'>
           <Image src='/icons/logo.png' width={300} height={165} alt='Logo' priority={true} />
         </div>
-        <div className='hidden dark:block lg:w-1/2'>
+        <div className='hidden dark:block'>
           <Image src='/icons/logo-dark.png' width={300} height={165} alt='Logo' priority={true} />
         </div>
 

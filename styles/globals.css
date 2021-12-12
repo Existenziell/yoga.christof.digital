@@ -71,7 +71,7 @@ html, body {
 
 .button {
   @apply w-48 my-8 px-8 py-4 
-  bg-brand text-white rounded shadow-2xl
+  bg-brand text-white rounded shadow-lg
     hover:shadow hover:cursor-pointer
     transition-all
 }
