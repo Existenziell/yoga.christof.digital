@@ -74,7 +74,7 @@ const Connect = () => {
                     <div className='relative'>
                         <textarea id='message' name='message' onChange={setData} rows='10' required disabled={sending} className='peer h-full w-full placeholder-transparent focus:outline-none bg-white/10 backdrop-blur-md rounded pl-4 py-4' placeholder='Message'></textarea>
                         <label htmlFor='message'
-                            className='absolute -top-5 left-0 text-sm transition-all 
+                            className='absolute -top-5 left-0 text-sm transition-all
                             peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:left-4
                             peer-focus:-top-5 peer-focus:left-0 peer-focus:text-gray-300 peer-focus:text-sm'>Message</label>
                     </div>
