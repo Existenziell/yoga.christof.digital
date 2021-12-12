@@ -1,10 +1,8 @@
 // https://github.com/naomigrace/nextjs-with-mapbox-gl-js/blob/master/pages/index.js
-
 import { useEffect, useState } from 'react'
 import { initializeMap } from '../lib/map/initializeMap'
 import { addDataLayer } from '../lib/map/addDataLayer'
-import Head from 'next/head'
-import Nav from '../components/Nav'
+import Layout from '../components/Layout'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { timeline as data } from '../lib/timeline'
 
@@ -43,24 +41,15 @@ const MapComponent = () => {
   }, [pageIsMounted, setMap, Map])
 
   return (
-    <div className='min-w-max h-screen'>
-      <Head>
-        <title>Map | yoga.christof.digital</title>
-        <link rel='icon' href='/favicon/favicon.ico' />
-        <link
-          href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css'
-          rel='stylesheet'
-        />
-        <meta name='description' content='Join me on a visual journey through my life | yoga.christof.digital | shift-happens' />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Gotu&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <Nav />
-      <div id='map' className='h-full w-full' />
-    </div>
+    <div id='map' className='w-full h-screen' />
+  )
+}
+
+MapComponent.getLayout = function getLayout(page) {
+  return (
+    <Layout title='Map'>
+      {page}
+    </Layout>
   )
 }
 

@@ -14,7 +14,7 @@ const Timeline = () => {
   }
 
   return (
-    <section className='timeline bg-cloth-pattern bg-repeat dark:bg-cloth-pattern-dark'>
+    <section className='timeline bg-cloth-pattern bg-repeat dark:bg-none dark:bg-brand-dark'>
       <h2 className='text-3xl mb-1'>The Timeline:</h2>
       {/* <p className='mb-16'>Join me, as Yoga became part of me.</p> */}
 
@@ -33,8 +33,8 @@ const Timeline = () => {
 
               <li
                 key={image}
-                className={`mb-16 sm:w-4/5 relative rounded-md shadow-lg  
-                bg-white dark:bg-black dark:text-gray-300 dark:border-white dark:border-2
+                className={`mb-16 sm:w-4/5 relative rounded shadow-lg  
+                bg-white dark:bg-gray-900 dark:gray-300 dark:border-white dark:border-none
                   ${image % 2 === 0 && `ml-auto`}`}>
                 <Image
                   src={`/timeline/${image}.jpg`}
@@ -46,9 +46,9 @@ const Timeline = () => {
                 />
                 <div className={`absolute top-0 text-white bg-black p-2 ${image % 2 === 0 ? `right-0` : `left-0`}`}>{date}</div>
                 <div className='p-4'>
-                  <h3 className='text-2xl text-brand'>{name}</h3>
+                  <h3 className='text-3xl mt-3 text-brand'>{name}</h3>
                   <h4 className='text-sm mb-6'>{subname}</h4>
-                  <p dangerouslySetInnerHTML={{ __html: description }}></p>
+                  <p dangerouslySetInnerHTML={{ __html: description }} className=' leading-relaxed'></p>
                 </div>
               </li>
             )

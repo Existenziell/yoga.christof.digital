@@ -45,7 +45,6 @@ const Nav = () => {
     }
 
     return (
-        // <nav className={`absolute dark:bg-black dark:text-gray-300 w-full py-3 md:py-0 z-10 ${router.pathname === '/map' && 'relative'}`}>
         <nav>
             {/* Darkmode toggle */}
             <div className='absolute right-4 top-4'>
@@ -64,25 +63,9 @@ const Nav = () => {
                 </audio>
             </div>
 
-            {/* Desktop menu */}
-            {/* <ul className='hidden md:flex justify-between items-center ml-4 w-max'>
-                {links.map(l => (
-                    <li key={l.name}>
-                        <Link href={l.url}>
-                            <a
-                                href={l.url}
-                                className={`${router.pathname === l.url ? 'active-nav' : 'border-b-2 border-white dark:border-brand'} hover:border-brand hover:bg-white dark:hover:text-black transition-all px-4 pb-2 pt-3 block`}>
-
-                                {l.name}
-                            </a>
-                        </Link>
-                    </li>
-                ))}
-            </ul> */}
-
             {/* Mobile menu */}
             {isOpen &&
-                <ul className='mobile-menu left-0 right-0 top-0 bottom-0 pt-20 bg-white z-10 dark:bg-black dark:text-gray-300 relative h-screen'>
+                <ul className='mobile-menu left-0 right-0 top-0 bottom-0 pt-20 bg-white z-10 dark:bg-brand-dark dark:text-gray-300 relative h-screen'>
                     {links.map(l => (
                         <li key={l.name}>
                             <a

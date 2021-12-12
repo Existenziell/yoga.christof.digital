@@ -5,17 +5,17 @@ import { services } from '../lib/services'
 
 const Services = () => {
   return (
-    <section className='px-4 md:px-8 py-24 bg-cloth-pattern bg-repeat dark:bg-cloth-pattern-dark'>
+    <section className='px-4 md:px-8 py-24 bg-cloth-pattern bg-repeat dark:bg-none dark:bg-brand-dark'>
       <div className='text-center'>
-        <h1 className='text-4xl md:text-6xl mb-2'>What can I do for You?</h1>
-        <p className='mb-12'>There are many ways we can work together:</p>
+        <h1 className='text-4xl md:text-6xl mb-2'>How may I help You?</h1>
+        <p className='mb-16'>There are many ways we can work together</p>
         <ul className='text-left w-full flex flex-wrap'>
           {services.map((s, index) => {
             const { title, copy } = s
             return (
               <li key={index} className={`w-full md:w-1/2 mb-16 px-4 lg:px-8`}>
-                <div className='relative rounded-md shadow-xl hover:shadow-none transition-all bg-white dark:bg-black dark:text-gray-300'>
-                  <Link href='/contact'>
+                <div className='relative rounded-md shadow-xl hover:shadow-none transition-all  bg-white dark:bg-gray-900 dark:text-gray-300 hover:scale-105'>
+                  <Link href='/connect'>
                     <a>
                       <Image
                         src={`/services/${index + 1}.jpg`}
@@ -25,8 +25,8 @@ const Services = () => {
                         alt={title}
                       />
                       <div className='p-4'>
-                        <h2 className='text-2xl text-brand mb-2'>{title}</h2>
-                        <p className='text-sm' dangerouslySetInnerHTML={{ __html: copy }}></p>
+                        <h2 className='text-3xl my-3 text-brand'>{title}</h2>
+                        <p className='text-sm leading-relaxed' dangerouslySetInnerHTML={{ __html: copy }}></p>
                       </div>
                     </a>
                   </Link>

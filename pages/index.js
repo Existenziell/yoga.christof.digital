@@ -24,7 +24,7 @@ export default function Index() {
         </p>
         <p>
           I have been travelling the world, for the last 4 years, practicing and teaching Yoga and looking for enticing projects and humans.<br />
-          Please <Link href='/contact'><a className='link'>contact me</a></Link> if you see possible synergies or have questions.
+          Please <Link href='/connect'><a className='link'>contact me</a></Link> if you see possible synergies or have questions.
         </p>
       </div>
 

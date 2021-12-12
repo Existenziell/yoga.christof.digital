@@ -1,8 +1,10 @@
+import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Footer from './Footer'
 import Nav from './Nav'
 
 export default function Layout({ children, title }) {
+  const router = useRouter()
   return (
     <>
       <Head>
@@ -19,12 +21,18 @@ export default function Layout({ children, title }) {
           href="https://fonts.googleapis.com/css2?family=Gotu&display=swap"
           rel="stylesheet"
         />
+        {router.pathname === '/map' &&
+          <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+        }
+        {router.pathname === '/testimonials' &&
+          <script async defer crossOrigin='anonymous' src='https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0&appId=239066989437628&autoLogAppEvents=1' nonce='rqW0DIVj'></script>
+        }
       </Head>
-      <div className='dark:bg-black h-full'>
+      <div className='dark:bg-brand-dark h-full'>
         {/* <Social /> */}
         <Nav />
       </div>
-      <main className='w-full text-center bg-cloth-pattern bg-repeat dark:bg-cloth-pattern-dark dark:text-gray-300'>
+      <main className='w-full text-center bg-cloth-pattern bg-repeat dark:bg-none dark:bg-brand-dark dark:text-gray-300'>
         {children}
       </main>
       <Footer />
