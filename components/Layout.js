@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Footer from './Footer'
 import Nav from './Nav'
+import DarkModeToggle from './DarkModeToggle'
 
 export default function Layout({ children, title }) {
   const router = useRouter()
@@ -31,6 +32,7 @@ export default function Layout({ children, title }) {
       <div className='dark:bg-brand-dark h-full'>
         {/* <Social /> */}
         <Nav />
+        <DarkModeToggle />
       </div>
       <main className='w-full text-center bg-cloth-pattern bg-repeat dark:bg-none dark:bg-brand-dark dark:text-gray-300'>
         {children}
