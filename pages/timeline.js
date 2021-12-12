@@ -6,8 +6,8 @@ import Video from '../components/Video'
 
 const Yoga = () => {
   return (
-    <div className='flex flex-col items-center justify-center px-4 md:px-8 py-16 md:py-32'>
-      <h1 className='text-4xl mb-8'>Yoga</h1>
+    <div className='flex flex-col items-center justify-center px-4 md:px-8 py-24'>
+      <h1 className='text-4xl md:text-6xl mb-8'>Yoga</h1>
       <p className='mb-4 md:px-32 leading-relaxed'>
         Yoga had quite an impact on my life. A groundbreaking impact indeed, that changed so much, so drastically, for the better.
         The following timeline is trying to put all the different places/learnings/teachings I was opportune to experience during my journey in semantic and chronological context.

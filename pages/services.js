@@ -5,9 +5,9 @@ import { services } from '../lib/services'
 
 const Services = () => {
   return (
-    <section className='px-4 md:px-8 py-16 md:py-32 bg-cloth-pattern bg-repeat dark:bg-cloth-pattern-dark'>
+    <section className='px-4 md:px-8 py-24 bg-cloth-pattern bg-repeat dark:bg-cloth-pattern-dark'>
       <div className='text-center'>
-        <h1 className='text-4xl mb-2'>Services I offer</h1>
+        <h1 className='text-4xl md:text-6xl mb-2'>What can I do for You?</h1>
         <p className='mb-12'>There are many ways we can work together:</p>
         <ul className='text-left w-full flex flex-wrap'>
           {services.map((s, index) => {
