@@ -41,7 +41,7 @@ export default function Index() {
 
       <section className='flex items-center justify-center h-screen mb-12 sm:bg-fixed bg-center bg-cover bg-parallax-2'>
         <div className='p-5 text-2xl rounded text-white bg-brand bg-opacity-50 dark:bg-brand-dark'>
-          shift happens, sooner rather than later.
+          shift_happens, sooner rather than later.
         </div>
       </section>
       <div className='max-w-lg m-auto'>
