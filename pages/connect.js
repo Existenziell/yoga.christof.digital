@@ -49,7 +49,7 @@ const Connect = () => {
                         This picture was taken in the beautiful city of Mysuru, Karnataka, India, with my teacher Rama. Pose: Dwi Pada Shirshasana - still a long way to go ッ
                     </p>
                 </div>
-                <Image src='/icons/connect.webp' alt='Connect' width={300} height={460} />
+                <Image src='/icons/connect.webp' alt='Connect' width={300} height={460} priority={true} />
                 <div className='w-max mx-auto mt-4 md:absolute md:bottom-0 md:w-max md:ml-auto'>
                     <Social />
                 </div>
