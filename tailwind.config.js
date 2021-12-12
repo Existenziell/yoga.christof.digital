@@ -1,12 +1,12 @@
 module.exports = {
   mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class', // false or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
         // https://tailwindcss.com/docs/font-family#customizing
-        body: [
+        sans: [
           'Gotu',
         ],
       },
