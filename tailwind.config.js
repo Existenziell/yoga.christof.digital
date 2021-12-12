@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         // https://tailwindcss.com/docs/font-family#customizing
-        sans: [
+        body: [
           'Gotu',
         ],
       },

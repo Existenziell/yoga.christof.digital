@@ -33,6 +33,7 @@ email: bauer.christof@gmail.com
 
 html, body {
 	scroll-behavior: smooth;
+  @apply font-body;
 }
 
 ::selection {
