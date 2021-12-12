@@ -5,16 +5,17 @@ export default function Index() {
   return (
     <>
       <header className='flex items-center justify-center h-screen sm:bg-fixed bg-center bg-cover bg-parallax-1'>
-        <h1 className='p-5 text-2xl text-white bg-brand bg-opacity-50 rounded'>
-          Welcome &#x2661;
-        </h1>
+        <a href='#anchor' aria-label='Scroll down'>
+          <h1 className='p-5 text-2xl text-white bg-brand bg-opacity-50 rounded'>
+            Hi, I am Christof.
+          </h1>
+        </a>
       </header>
 
       <div className='max-w-xl m-auto px-4 leading-relaxed my-16'>
-        <h2 className='text-2xl mb-6'>
-          Hi, I am Christof.
+        <h2 className='text-2xl mb-6' id='anchor'>
+          You have come to the right place.
         </h2>
-        <p className='mb-2'>You have come to the right place.</p>
         <p className='mb-2'>
           A place where you can explore the world of shift_happens_yoga,{' '}
           take a <Link href='/timeline'><a className='link'>deep dive</a></Link> into what brought me here,{' '}
@@ -22,6 +23,7 @@ export default function Index() {
           find the right <Link href='/services'><a className='link'>service</a></Link> for you,{' '}
           interact visually with the <Link href='/map'><a className='link'>map</a></Link> of all shifting events of my journey or just follow along on this indeed life changing endeavour.
         </p>
+        <p className='mb-2 text-3xl'>&#x2661;</p>
         <p>
           I have been travelling the world, for the last 4 years, practicing and teaching Yoga and looking for enticing projects and humans.<br />
           Please <Link href='/connect'><a className='link'>contact me</a></Link> if you see possible synergies or have questions.
