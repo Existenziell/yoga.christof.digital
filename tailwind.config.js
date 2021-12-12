@@ -16,7 +16,6 @@ module.exports = {
       },
       backgroundImage: {
         'cloth-pattern': 'url(/icons/cloth.jpg)',
-        'cloth-pattern-dark': 'url(/icons/cloth-dark.jpg)',
         'parallax-1': 'url(/parallax/1.webp)',
         'parallax-2': 'url(/parallax/2.webp)',
         poly: 'url(/icons/poly.svg)',

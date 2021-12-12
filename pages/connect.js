@@ -93,7 +93,7 @@ const Connect = () => {
                     }
                 </form>
             </div>
-        </div >
+        </div>
     )
 }
 

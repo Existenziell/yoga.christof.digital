@@ -31,8 +31,7 @@ const Nav = () => {
                                 onClick={intercept}
                                 className={`${router.pathname === l.url && 'active-nav shadow-sm'} 
                                 w-full block text-2xl md:text-4xl text-center leading-loose px-8 py-2 md:py-8 
-                                hover:bg-brand hover:text-white transition-all`}
-                            >
+                                hover:bg-brand hover:text-white transition-all`}>
                                 {l.name}
                             </a>
                         </li>

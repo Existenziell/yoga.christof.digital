@@ -23,7 +23,7 @@ const Testimonials = () => {
         {testimonials.map(tm => {
           return (
             <div key={tm}>
-              <FacebookProvider appId='239066989437628' >
+              <FacebookProvider appId='239066989437628'>
                 <EmbeddedPost href={tm} width='auto' />
               </FacebookProvider>
             </div>
