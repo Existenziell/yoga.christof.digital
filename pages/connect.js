@@ -55,19 +55,19 @@ const Connect = () => {
                 </div>
             </div>
 
-            <div className='px-4 py-8 sm:p-12 mt-6 shadow w-full bg-white dark:bg-gray-700'>
+            <div className='px-4 py-8 sm:p-12 mt-6 shadow w-full bg-white dark:bg-gray-700 dark:bg-white/10 dark:backdrop-blur-md rounded'>
                 <form onSubmit={submitForm}>
 
                     <div className='relative mb-12'>
-                        <input id='name' name='name' type='text' onChange={setData} required disabled={sending} className='peer h-10 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-brand dark:bg-gray-700 dark:text-gray-300' placeholder='Name' />
+                        <input id='name' name='name' type='text' onChange={setData} required disabled={sending} className='peer h-10 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-brand dark:bg-white/10 dark:backdrop-blur-md dark:text-gray-300' placeholder='Name' />
                         <label htmlFor='name' className='absolute left-0 -top-4 text-gray-600 dark:text-gray-300 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-gray-600 peer-focus:text-sm dark:peer-focus:text-gray-300'>Name</label>
                     </div>
                     <div className='relative mb-12'>
-                        <input id='email' type='email' name='email' onChange={setData} required disabled={sending} className='peer h-10 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-brand dark:bg-gray-700 dark:text-gray-300' placeholder='Email' />
+                        <input id='email' type='email' name='email' onChange={setData} required disabled={sending} className='peer h-10 w-full border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-brand dark:bg-white/10 dark:backdrop-blur-md dark:text-gray-300' placeholder='Email' />
                         <label htmlFor='email' className='absolute left-0 -top-4 text-gray-600 dark:text-gray-300 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-gray-600 peer-focus:text-sm dark:peer-focus:text-gray-300'>Email</label>
                     </div>
                     <div className='relative'>
-                        <textarea id='message' name='message' onChange={setData} rows='10' required disabled={sending} className='peer h-full w-full py-4 border-t-2 border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-brand dark:bg-gray-700 dark:text-gray-300' placeholder='Message'></textarea>
+                        <textarea id='message' name='message' onChange={setData} rows='10' required disabled={sending} className='peer h-full w-full py-4 border-t-2 border-b-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-brand dark:bg-white/10 dark:backdrop-blur-md dark:text-gray-300' placeholder='Message'></textarea>
                         <label htmlFor='message' className='absolute left-0 -top-5 text-gray-600 dark:text-gray-300 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-5 peer-focus:text-gray-600 peer-focus:text-sm dark:peer-focus:text-gray-300'>Message</label>
                     </div>
 

@@ -28,8 +28,8 @@ const Timeline = () => {
             return (
               <li
                 key={image}
-                className={`mb-16 sm:w-4/5 relative rounded shadow-lg  
-                bg-white dark:bg-gray-900 dark:gray-300 dark:border-white dark:border-none
+                className={`mb-16 sm:w-4/5 relative rounded shadow-lg bg-white
+                dark:bg-white/10 dark:backdrop-blur-md dark:gray-300 dark:border-white dark:border-none
                   ${image % 2 === 0 && `ml-auto`}`}>
                 <Image
                   src={`/timeline/${image}.jpg`}

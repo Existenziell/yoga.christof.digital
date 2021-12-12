@@ -14,7 +14,8 @@ const Services = () => {
             const { title, copy } = s
             return (
               <li key={index} className={`w-full md:w-1/2 mb-16 px-4 lg:px-12`}>
-                <div className='relative rounded-md shadow hover:shadow-xl transition-all bg-white dark:bg-gray-900 dark:text-gray-300 hover:scale-105 duration-500'>
+                <div className='relative rounded-md shadow hover:shadow-xl transition-all duration-500 bg-white
+                  dark:bg-white/10 dark:backdrop-blur-md dark:text-gray-300 hover:scale-105 '>
                   <Link href='/connect'>
                     <a>
                       <Image
