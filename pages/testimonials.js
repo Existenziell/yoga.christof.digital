@@ -6,7 +6,7 @@ import Blob from '../components/Blob'
 
 const Testimonials = () => {
   return (
-    <div className='flex flex-col items-center justify-content px-4 md:px-8 py-24 bg-cloth-pattern dark:bg-none dark:bg-brand-dark'>
+    <div className='flex flex-col items-center justify-content px-4 md:px-8 py-24 bg-cloth-pattern dark:bg-none dark:bg-brand-dark overflow-hidden'>
       <h1 className='text-4xl md:text-6xl mb-2'>Testimonials</h1>
       <p className='mb-12 max-w-sm text-center'>Let&apos;s see how students described their experience with shift_happens_yoga:</p>
 
