@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const DarkModeToggler = () => {
+const DarkModeToggle = () => {
   const [darkMode, setDarkMode] = useState()
 
   useEffect(() => {
@@ -48,4 +48,4 @@ const DarkModeToggler = () => {
   )
 }
 
-export default DarkModeToggler
+export default DarkModeToggle
