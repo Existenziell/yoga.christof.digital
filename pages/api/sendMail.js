@@ -1,9 +1,12 @@
+import ReactDOMServer from 'react-dom/server';
 import sgMail from '@sendgrid/mail'
+import { htmlEmail } from '../../lib/htmlEmail'
 
 sgMail.setApiKey(process.env.NEXT_PUBLIC_MAIL_API_KEY)
 
 const sendMail = async (req, res) => {
   const { name, email, message } = req.body
+  const html = ReactDOMServer.renderToStaticMarkup(htmlEmail(name, message))
 
   // Goes to me
   const notificationMsg = {
@@ -19,6 +22,7 @@ const sendMail = async (req, res) => {
     from: process.env.NEXT_PUBLIC_MAIL_FROM,
     subject: `Contact confirmation | yoga.christof.digital`,
     text: `Hello ${name},\nThis is a confirmation, that your message to yoga.christof.digital has indeed been received successfully.\nI'll come back to you as soon as possible.\nThank you so much.\nChristof`,
+    html,
   }
 
   try {
