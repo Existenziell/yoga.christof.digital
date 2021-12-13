@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Sorting from './Sorting'
 import { timeline } from '../lib/timeline'
+import { ScrollIndicator } from './ScrollIndicator'
 
 const Timeline = () => {
   const [sortBy, setSortBy] = useState(true)
@@ -16,10 +17,8 @@ const Timeline = () => {
     <section className='timeline bg-cloth-pattern bg-repeat dark:bg-none dark:bg-brand-dark'>
       <h2 className='text-4xl mb-2'>The Timeline:</h2>
 
-      <Sorting
-        sortBy={sortBy}
-        toggleSortBy={toggleSortBy}
-      />
+      <ScrollIndicator />
+      <Sorting sortBy={sortBy} toggleSortBy={toggleSortBy} />
 
       <ul className='text-left w-full mt-12'>
         {data.map((feature, index) => {
