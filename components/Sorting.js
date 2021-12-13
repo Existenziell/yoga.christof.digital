@@ -1,25 +1,25 @@
-import { Switch } from '@headlessui/react'
+import { motion } from 'framer-motion'
 
 const Sorting = ({ sortBy, toggleSortBy }) => {
+  const spring = {
+    type: 'spring',
+    stiffness: 700,
+    damping: 25,
+  }
+
   return (
     <div className='mx-auto w-max'>
-      <Switch.Group>
-        <div className="flex items-center text-sm">
-          <Switch.Label className="mr-3">Newest first</Switch.Label>
-          <Switch
-            checked={sortBy}
-            onChange={toggleSortBy}
-            className={`${sortBy ? 'bg-brand' : 'bg-gray-400'} 
-            relative inline-flex items-center h-6 rounded-sm w-11 transition-colors 
-            focus:outline-none focus:ring-2 focus:ring-offset-2 ring-brand-dark`}>
-            <span
-              className={`${sortBy ? 'translate-x-6' : 'translate-x-1'} 
-              inline-block w-4 h-4 transform bg-white rounded-sm transition-transform`}
-            />
-          </Switch>
-          <Switch.Label className="ml-3">Oldest first</Switch.Label>
+      <div className='flex items-center text-sm'>
+        <span className='mr-3'>Oldest first</span>
+        <div className={`${sortBy ? 'bg-gray-400' : 'bg-brand justify-end'} 
+            flex justify-start cursor-pointer w-11 h-6 rounded-sm relative items-center px-1
+            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-dark`}
+          data-ison={sortBy}
+          onClick={toggleSortBy}>
+          <motion.div className='w-4 h-4 bg-white rounded-sm' layout transition={spring} />
         </div>
-      </Switch.Group>
+        <span className='ml-3'>Newest first</span>
+      </div>
     </div>
   )
 }
