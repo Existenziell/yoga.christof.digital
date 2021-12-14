@@ -2,9 +2,9 @@
 import { useEffect, useState } from 'react'
 import { initializeMap } from '../lib/map/initializeMap'
 import { addDataLayer } from '../lib/map/addDataLayer'
-import Layout from '../components/Layout'
-import 'mapbox-gl/dist/mapbox-gl.css'
 import { timeline as data } from '../lib/timeline'
+import Head from 'next/head'
+import 'mapbox-gl/dist/mapbox-gl.css'
 
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js')
 
@@ -41,15 +41,15 @@ const MapComponent = () => {
   }, [pageIsMounted, setMap, Map])
 
   return (
-    <div id='map' className='w-full h-screen' />
-  )
-}
+    <>
+      <Head>
+        <title>Map | yoga.christof.digital</title>
+        <meta name='description' content='Explore with me | yoga.christof.digital | shift-happens | Yoga &amp; Movement' />
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+      </Head>
 
-MapComponent.getLayout = function getLayout(page) {
-  return (
-    <Layout title='Map'>
-      {page}
-    </Layout>
+      <div id='map' className='w-full h-screen' />
+    </>
   )
 }
 

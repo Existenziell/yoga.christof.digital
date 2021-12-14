@@ -1,10 +1,14 @@
-import Layout from '../components/Layout'
 import Link from 'next/link'
 import Image from 'next/image'
+import Head from 'next/head'
 
 const Root = () => {
   return (
     <>
+      <Head>
+        <title>Root | yoga.christof.digital</title>
+      </Head>
+
       <header className='flex items-center justify-center h-screen sm:bg-fixed bg-center bg-cover bg-parallax-1'>
         <a href='#anchor' aria-label='Scroll down'>
           <h1 className='p-5 text-2xl text-white bg-brand bg-opacity-50 dark:bg-brand-dark rounded'>
@@ -52,14 +56,6 @@ const Root = () => {
         </p>
       </div>
     </>
-  )
-}
-
-Root.getLayout = function getLayout(page) {
-  return (
-    <Layout>
-      {page}
-    </Layout>
   )
 }
 

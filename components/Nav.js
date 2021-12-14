@@ -1,15 +1,8 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
+import { paths } from '../lib/paths'
 
 const Nav = () => {
-    const links = [
-        { name: 'Root', url: '/' },
-        { name: 'Timeline', url: '/timeline' },
-        { name: 'Services', url: '/services' },
-        { name: 'Testimonials', url: '/testimonials' },
-        { name: 'Map', url: '/map' },
-        { name: 'Connect', url: '/connect' },
-    ]
     const router = useRouter()
     const [isOpen, setIsOpen] = useState(false)
 
@@ -24,15 +17,15 @@ const Nav = () => {
             {/* Mobile menu */}
             {isOpen &&
                 <ul className='mobile-menu left-0 right-0 top-0 bottom-0 pt-20 bg-white z-10 dark:bg-brand-dark dark:text-gray-300 relative h-screen'>
-                    {links.map(l => (
-                        <li key={l.name}>
+                    {paths.map(path => (
+                        <li key={path.name}>
                             <a
-                                href={l.url}
+                                href={path.url}
                                 onClick={intercept}
-                                className={`${router.pathname === l.url && 'active-nav shadow-sm'} 
+                                className={`${router.pathname === path.url && 'active-nav shadow-sm'} 
                                 w-full block text-2xl md:text-4xl text-center leading-loose px-8 py-2 md:py-8 
                                 hover:bg-brand hover:text-white transition-all`}>
-                                {l.name}
+                                {path.name}
                             </a>
                         </li>
                     ))}

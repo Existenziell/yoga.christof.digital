@@ -8,7 +8,6 @@ const Animate = ({ content }) => {
 
   useEffect(() => {
     if (inView) {
-      // console.log('inView')
       flyInFromLeft.start({
         x: 0,
         transition: {
@@ -20,7 +19,6 @@ const Animate = ({ content }) => {
     }
 
     if (!inView) {
-      // console.log('NOT inView')
       flyInFromLeft.start({
         x: '-100vw',
       })
