@@ -5,22 +5,26 @@ import { htmlEmail } from '../../lib/htmlEmail'
 sgMail.setApiKey(process.env.NEXT_PUBLIC_MAIL_API_KEY)
 
 const sendMail = async (req, res) => {
-  const { name, email, message } = req.body
-  const html = ReactDOMServer.renderToStaticMarkup(htmlEmail(name, message))
+  const { name, email, message, topic } = req.body
+  const html = ReactDOMServer.renderToStaticMarkup(htmlEmail(name, message, topic))
+
+  const notificationMessage = topic
+    ? `From: ${name}\nEmail: ${email}\nTopic: ${topic.replace(/-/g, ' ')}\n\n${message}`
+    : `From: ${name}\nEmail: ${email}\n\n${message}`
 
   // Goes to me
   const notificationMsg = {
     to: process.env.NEXT_PUBLIC_MAIL_TO,
     from: process.env.NEXT_PUBLIC_MAIL_FROM,
-    subject: `Notification: Contact request from ${name} - ${email}`,
-    text: message,
+    subject: `Contact request on yoga.christof.digital`,
+    text: notificationMessage,
   }
 
   // Goes to the user
   const confirmationMsg = {
     to: email,
     from: process.env.NEXT_PUBLIC_MAIL_FROM,
-    subject: `Contact confirmation | yoga.christof.digital`,
+    subject: `Confirmation | yoga.christof.digital`,
     text: `Hello ${name},\nThis is a confirmation, that your message to yoga.christof.digital has indeed been received successfully.\nI'll come back to you as soon as possible.\nThank you so much.\nChristof`,
     html,
   }

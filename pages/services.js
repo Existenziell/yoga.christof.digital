@@ -18,11 +18,13 @@ const Services = () => {
           <ul className='text-left w-full flex flex-wrap'>
             {services.map((s, index) => {
               const { title, copy } = s
+              const topic = title.replace(/ /g, '-').replace('&', 'and').toLowerCase()
+
               return (
                 <li key={index} className={`w-full md:w-1/2 mb-16 px-4 lg:px-12`}>
                   <div className='relative rounded-md shadow hover:shadow-xl transition-all duration-500 bg-white
                   dark:bg-white/10 dark:backdrop-blur-md dark:text-gray-300 hover:scale-105 '>
-                    <Link href='/connect'>
+                    <Link href={`/connect?topic=${topic}`}>
                       <a>
                         <Image
                           src={`/services/${index + 1}.jpg`}
