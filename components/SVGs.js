@@ -33,8 +33,6 @@ const SVGs = () => {
           strokeWidth='10'
           strokeLinecap='round'
           fill='transparent'
-          strokeLinecap='round'
-          fill='transparent'
           variants={draw}
           custom={1}
         />

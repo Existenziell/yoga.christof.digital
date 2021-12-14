@@ -25,7 +25,7 @@ const Animate = ({ content }) => {
         x: '-100vw',
       })
     }
-  }, [inView])
+  }, [inView, flyInFromLeft])
 
   return (
     <div ref={ref}>
