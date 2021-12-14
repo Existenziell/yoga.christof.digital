@@ -29,7 +29,7 @@ const Testimonials = () => {
         <div className='w-full flex flex-col space-y-8 mt-16'>
           {testimonials.map(tm => {
             return (
-              <div key={tm} className='mx-auto max-w-xl'>
+              <div key={tm}>
                 <FacebookProvider appId='239066989437628'>
                   <EmbeddedPost href={tm} width='auto' />
                 </FacebookProvider>
