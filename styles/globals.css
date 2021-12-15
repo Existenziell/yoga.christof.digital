@@ -109,11 +109,11 @@ input[type='radio']:checked:after {
 }
 
 div.mapboxgl-popup-content {
-  @apply p-2 bg-gray-200 dark:bg-gray-700;
+  @apply p-2 bg-white/20 backdrop-blur-md;
 }
 
 .mapboxgl-popup-content div {
-  @apply text-sm px-4 py-5 shadow font-sans bg-white dark:bg-black dark:text-white;
+  @apply text-sm px-4 py-5 shadow font-sans bg-white/60 backdrop-blur-md dark:bg-brand-dark/80 dark:text-white;
 }
 
 .mapboxgl-popup-content span {
@@ -133,5 +133,5 @@ div.mapboxgl-popup-content {
 }
 
 .mapboxgl-popup-close-button {
-  @apply text-3xl px-4 py-1 hover:text-brand dark:text-white focus:outline-none;
+  @apply text-3xl px-4 py-1 hover:text-brand hover:scale-105 transition-all dark:text-white focus:outline-none;
 }

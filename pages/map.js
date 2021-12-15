@@ -1,8 +1,9 @@
 // https://github.com/naomigrace/nextjs-with-mapbox-gl-js/blob/master/pages/index.js
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import { initializeMap } from '../lib/map/initializeMap'
 import { addDataLayer } from '../lib/map/addDataLayer'
-import { timeline as data } from '../lib/timeline'
+import { timeline } from '../lib/timeline'
 import Head from 'next/head'
 import 'mapbox-gl/dist/mapbox-gl.css'
 
@@ -11,6 +12,7 @@ const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js')
 const MapComponent = () => {
   const [Map, setMap] = useState()
   const [pageIsMounted, setPageIsMounted] = useState(false)
+  const router = useRouter()
 
   mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN
 
@@ -28,14 +30,20 @@ const MapComponent = () => {
       // pitch: 45,
     })
 
-    initializeMap(mapboxgl, map)
+    // If the URL contains ?popup=x (coming from the timeline), open a popup on the map
+    const popup = router.query.popup
+    if (popup) {
+      initializeMap(mapboxgl, map, popup)
+    } else {
+      initializeMap(mapboxgl, map)
+    }
     setMap(map)
-  }, [])
+  }, [router.query.popup])
 
   useEffect(() => {
-    if (pageIsMounted && data) {
-      Map.on('load', function () {
-        addDataLayer(Map, data)
+    if (pageIsMounted && timeline) {
+      Map.on('load', () => {
+        addDataLayer(Map, timeline)
       })
     }
   }, [pageIsMounted, setMap, Map])

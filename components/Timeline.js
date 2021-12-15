@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import Sorting from './Sorting'
 import { timeline } from '../lib/timeline'
 import { ScrollIndicator } from './ScrollIndicator'
@@ -20,7 +21,7 @@ const Timeline = () => {
       <ScrollIndicator />
       <Sorting sortBy={sortBy} toggleSortBy={toggleSortBy} />
 
-      <ul className='text-left w-full mt-12'>
+      <ul className='w-full mt-12'>
         {data.map((feature, index) => {
           const { id, image, date, name, subname, description, mapOnly } = feature.properties
           if (!mapOnly) {
@@ -29,7 +30,8 @@ const Timeline = () => {
                 key={image}
                 className={`mb-16 sm:w-4/5 relative rounded shadow-lg bg-white
                 dark:bg-white/10 dark:backdrop-blur-md dark:gray-300 dark:border-white dark:border-none
-                  ${image % 2 === 0 && `ml-auto`}`}>
+                  ${image % 2 === 0 ? `ml-auto text-right` : `text-left`}
+                  `}>
                 <Image
                   src={`/timeline/${image}.jpg`}
                   width={800}
@@ -43,6 +45,17 @@ const Timeline = () => {
                   <h3 className='text-3xl mt-3 text-brand'>{name}</h3>
                   <h4 className='text-sm mb-6'>{subname}</h4>
                   <p dangerouslySetInnerHTML={{ __html: description }} className=' leading-relaxed'></p>
+                  <Link href={`/map?popup=${image}`}>
+                    <a className='text-xs flex items-center mt-4'>
+                      <div className='block dark:hidden'>
+                        <Image src='/icons/globe.png' width={25} height={25} alt='Globe' />
+                      </div>
+                      <div className='hidden dark:block'>
+                        <Image src='/icons/globe-dark.png' width={25} height={25} alt='Globe' />
+                      </div>
+                      <span className='ml-2 border border-transparent hover:border-b hover:border-b-brand transition-all'>View on Map</span>
+                    </a>
+                  </Link>
                 </div>
               </li>
             )
