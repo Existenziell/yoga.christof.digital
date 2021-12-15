@@ -45,7 +45,7 @@ const Timeline = () => {
                   <h3 className='text-3xl mt-3 text-brand'>{name}</h3>
                   <h4 className='text-sm mb-6'>{subname}</h4>
                   <p dangerouslySetInnerHTML={{ __html: description }} className=' leading-relaxed'></p>
-                  <Link href={`/map?popup=${image}`}>
+                  <Link href={`/map?location=${image}`}>
                     <a className='text-xs flex items-center mt-4'>
                       <div className='block dark:hidden'>
                         <Image src='/icons/globe.png' width={25} height={25} alt='Globe' />

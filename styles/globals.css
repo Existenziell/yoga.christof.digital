@@ -132,6 +132,10 @@ div.mapboxgl-popup-content {
   @apply w-full shadow-lg;
 }
 
+.mapboxgl-popup-tip {
+  @apply opacity-20;
+}
+
 .mapboxgl-popup-close-button {
   @apply text-3xl px-4 py-1 hover:text-brand hover:scale-105 transition-all dark:text-white focus:outline-none;
 }

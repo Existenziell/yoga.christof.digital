@@ -30,15 +30,15 @@ const MapComponent = () => {
       // pitch: 45,
     })
 
-    // If the URL contains ?popup=x (coming from the timeline), open a popup on the map
-    const popup = router.query.popup
-    if (popup) {
-      initializeMap(mapboxgl, map, popup)
+    // If the URL contains ?location=x (coming from the timeline), open a popup on the map
+    const location = router.query.location
+    if (location) {
+      initializeMap(mapboxgl, map, location)
     } else {
       initializeMap(mapboxgl, map)
     }
     setMap(map)
-  }, [router.query.popup])
+  }, [router.query.location])
 
   useEffect(() => {
     if (pageIsMounted && timeline) {
