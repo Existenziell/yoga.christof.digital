@@ -3,11 +3,11 @@ import '../styles/globals.css'
 import Layout from '../components/_Layout'
 import Head from 'next/head'
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>yoga.christof.digital </title>
+        <title>yoga.christof.digital</title>
         <meta name='description' content='yoga.christof.digital | shift-happens | Yoga &amp; Movement' />
         <link rel='icon' href='/favicon/favicon.ico' />
         <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-touch-icon.png' />
@@ -24,4 +24,4 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-export default MyApp
+export default App
