@@ -16,6 +16,8 @@ function App({ Component, pageProps }) {
         <link rel="manifest" href="/manifest.json" />
         <meta name="msapplication-TileColor" content="#242424" />
         <meta name="theme-color" content="#242424" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet" />
       </Head>
       <Layout>
         <Component {...pageProps} />

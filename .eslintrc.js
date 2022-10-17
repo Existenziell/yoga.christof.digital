@@ -28,6 +28,7 @@ module.exports = {
   rules: {
     'comma-dangle': 'off',
     'quotes': 'off',
+    '@next/next/no-page-custom-font': 'off',
     'space-before-function-paren': 'off',
     'operator-linebreak': ['off'],
   },
