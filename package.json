@@ -17,7 +17,7 @@
     "caniuse-lite": "^1.0.30001418",
     "framer-motion": "^7.5.3",
     "mapbox-gl": "^2.6.0",
-    "next": "12.3.1",
+    "next": "^12.3.1",
     "nextjs-progressbar": "^0.0.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
