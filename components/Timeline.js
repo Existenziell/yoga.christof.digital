@@ -23,7 +23,7 @@ const Timeline = () => {
 
       <ul className='w-full mt-12'>
         {data.map((feature, index) => {
-          const { id, image, date, name, subname, description, mapOnly } = feature.properties
+          const { image, date, name, subname, description, mapOnly } = feature.properties
           if (!mapOnly) {
             return (
               <li
@@ -39,8 +39,13 @@ const Timeline = () => {
                   layout={'responsive'}
                   alt={name}
                   priority={index === 1 || index === 19}
+                  placeholder="blur"
+                  blurDataURL={`/timeline/${image}.jpg`}
+                  className='rounded-t'
                 />
-                <div className={`absolute top-0 text-white bg-white/10 backdrop-blur-md p-2 ${image % 2 === 0 ? `right-0 rounded-bl-md` : `left-0 rounded-br-md`}`}>{date}</div>
+                <div className={`absolute top-0 text-white bg-white/10 backdrop-blur-md p-2 rounded-tl ${image % 2 === 0 ? `right-0 rounded-bl-md` : `left-0 rounded-br-md`}`}>
+                  {date}
+                </div>
                 <div className='p-4'>
                   <h3 className='text-3xl mt-3 text-brand'>{name}</h3>
                   <h4 className='text-sm mb-6'>{subname}</h4>
@@ -60,6 +65,7 @@ const Timeline = () => {
               </li>
             )
           }
+          return false
         })}
       </ul>
 

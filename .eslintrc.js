@@ -6,6 +6,7 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
+    'plugin:import/recommended',
     'standard',
     'next',
   ],
@@ -25,17 +26,12 @@ module.exports = {
     },
   },
   rules: {
-    'comma-dangle': ['error', 'always-multiline'],
-    'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 0,
-    indent: 'off',
-    quotes: ['error', 'single', { allowTemplateLiterals: true }],
-    'space-before-function-paren': ['error', {
-      anonymous: 'always',
-      named: 'never',
-      asyncArrow: 'always',
-    }],
+    'comma-dangle': 'off',
+    '@next/next/no-page-custom-font': 'off',
+    '@next/next/no-img-element': 'off',
+    'quotes': 'off',
+    'space-before-function-paren': 'off',
     'operator-linebreak': ['off'],
   },
-  ignorePatterns: ['coverage.json', '/coverage/*', '/test/*', '/pages/_app.js', 'timeline.js'],
+  ignorePatterns: ['coverage.json', '/coverage/*', '/test/*'],
 }
