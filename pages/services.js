@@ -32,6 +32,8 @@ const Services = () => {
                           height={350}
                           layout={'responsive'}
                           alt={title}
+                          placeholder="blur"
+                          blurDataURL={`/services/${index + 1}.jpg`}
                         />
                         <div className='p-4'>
                           <h2 className='text-3xl my-3 text-brand'>{title}</h2>
