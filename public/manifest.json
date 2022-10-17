@@ -4,9 +4,9 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "app.christof.digital",
+  "name": "yoga.christof.digital",
   "description": "Fullstack Developer Portfolio",
-  "short_name": "CB",
+  "short_name": "YC",
   "icons": [
     {
       "src": "/pwa/icon-192x192.png",
