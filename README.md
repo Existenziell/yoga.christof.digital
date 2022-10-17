@@ -12,3 +12,4 @@ I have been travelling the world for the last 4 years, practicing and teaching Y
 - TailwindCSS
 - Mapbox
 - Vercel
+- PWA
