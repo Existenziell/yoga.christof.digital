@@ -5,9 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          'Gotu',
-        ],
+        sans: ['Gotu'],
       },
       colors: {
         'brand': '#C90076',
