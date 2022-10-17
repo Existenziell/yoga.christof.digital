@@ -11,14 +11,14 @@ module.exports = {
         ],
       },
       colors: {
-        brand: '#C90076',
+        'brand': '#C90076',
         'brand-dark': '#200530',
       },
       backgroundImage: {
         'cloth-pattern': 'url(/icons/cloth.jpg)',
         'parallax-1': 'url(/parallax/1.webp)',
         'parallax-2': 'url(/parallax/2.webp)',
-        poly: 'url(/icons/poly.svg)',
+        'poly': 'url(/icons/poly.svg)',
       },
       minWidth: {
         '1/4': '25%',
@@ -51,14 +51,6 @@ module.exports = {
     gradientColorStops: theme => ({
       primary: '#fdbb2d',
       secondary: '#22c1c3',
-      // primary: '#00c3ff',
-      // secondary: '#ffff1c',
-      // primary: '#F4D03F',
-      // secondary: '#16A085',
-      // primary: '#36D1DC',
-      // secondary: '#5B86E5',
-      // primary: '#007991',
-      // secondary: '#78ffd6',
     }),
   },
   variants: {
