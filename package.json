@@ -14,7 +14,6 @@
     "@heroicons/react": "^2.0.12",
     "@mapbox/mapbox-gl-geocoder": "^4.7.4",
     "@sendgrid/mail": "^7.7.0",
-    "caniuse-lite": "^1.0.30001418",
     "framer-motion": "^7.5.3",
     "mapbox-gl": "^2.6.0",
     "next": "^12.3.1",
